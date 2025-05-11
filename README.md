@@ -9,209 +9,187 @@ You are part of a development team working on an AI-based Smart Health Assistant
 ## Objective:
 Develop a scenario-based report that demonstrates how diverse prompting techniques (zero-shot, few-shot, chain-of-thought, role-based, and multi-modal prompts) can be used to optimize MediGuide’s responses in different use cases.
 
-# Algorithm:
 
-### Step 1: Data Collection
-1. **Input Data**: Provide the healthcare case data (e.g., symptoms, medical history, test results) in a structured format.
-2. **Select AI Tools**: Choose two AI platforms for evaluation: **ChatGPT** and **Claude**.
+## 📊 Algorithm
+## Step 1: Data Collection
+Input: Simulated patient data (e.g., symptoms, vitals, test results)
 
-### Step 2: Apply Different Prompting Techniques
-1. **Straightforward Prompts**:
-   - Prompt: Provide basic symptoms and request a diagnosis and treatment suggestion.
-   - Example Prompt: "The patient presents with shortness of breath, fever, and chest pain. Based on these symptoms, what is the likely diagnosis and treatment?"
+Platforms: ChatGPT (GPT-4) and Claude (Anthropic)
 
-2. **Tabular Format Prompting**:
-   - Present the data in a table format, listing symptoms, medical history, and test results.
-   - Example Prompt: "Here’s the patient data in a tabular format: [Table with symptoms, medical history, and test results]. Based on this, what would be the likely diagnosis and recommended treatment?"
+## Step 2: Apply Prompting Techniques
+Zero-shot Prompting: No examples given—directly asks for diagnosis and treatment.
 
-3. **Missing Word Prompting**:
-   - Provide a partially completed sentence and ask the AI to fill in the missing information.
-   - Example Prompt: "The patient's likely diagnosis is _____, and the recommended treatment involves _____."
+Few-shot Prompting: Provides 2–3 examples before asking for analysis.
 
-### Step 3: Submit to AI Platforms
-1. **Submit Prompt to ChatGPT**: Use the selected prompt with **ChatGPT**.
-2. **Submit Prompt to Claude**: Use the same selected prompt with **Claude**.
+Chain-of-Thought Prompting: Promotes step-by-step reasoning.
 
-### Step 4: Collect Responses
-1. **ChatGPT Output**: Collect and store ChatGPT's response.
-2. **Claude Output**: Collect and store Claude's response.
+Role-based Prompting: Assigns a role to the model (e.g., "act as a geriatric doctor").
 
-### Step 5: Evaluation Criteria
-1. **Accuracy**: Check if the AI correctly identifies the disease and recommends suitable treatment.
-2. **Completeness**: Ensure that the AI's response includes all necessary diagnostic steps and treatment plans.
-3. **Simplicity**: Evaluate if the response is easy to understand, especially for non-medical professionals.
-4. **Coherence**: Assess if the response is logically structured and follows a clear reasoning process.
+Multi-modal Prompting: Incorporates images or tables alongside text prompts (used with simulated tabular health data).
 
-### Step 6: Comparative Analysis
-1. Compare **ChatGPT** and **Claude** based on the evaluation criteria.
-2. Identify strengths and weaknesses of each AI platform in terms of clarity, specificity, and appropriateness of the response.
+## Step 3: Input Prompts into AI Platforms
+Submit each type of prompt to ChatGPT and Claude for analysis.
 
-### Step 7: Generate Report
-1. **Tabulate Findings**: Present the results in a table format for easy comparison.
-2. **Conclusion**: Summarize the findings, highlighting the best-performing platform for each prompt type.
-3. **Recommendations**: Suggest the most effective prompting strategy and platform based on the evaluation.
+## Step 4: Collect and Evaluate Responses
+Analyze outputs for:
 
-### Step 8: Reporting
-- Output the final evaluation report, including the comparison of accuracy, completeness, simplicity, and coherence for each AI platform.
+1.Accuracy
 
----
+2.Completeness
 
-# OUTPUT 
-## 📚 Use Case
-# Healthcare Use Case: AI-driven Diagnostics and Recommendations
+3.Clarity & Simplicity
 
-## Objective:
-To compare the effectiveness of three distinct prompt types—
+4.Coherence
 
-**Straightforward Prompts**
-**Tabular Format Prompting**, 
-**Missing Word Prompting**
-—across two different AI platforms (e.g., **ChatGPT** and **Claude**) for generating healthcare diagnostics and recommendations.
+5.Relevance to elderly care
 
----
+## Step 5: Compare Results
+Evaluate platform performance for each prompting method.
 
-## AI Tools Used:
-1. **ChatGPT** (GPT-4)
-2. **Claude** (Anthropic AI)
+## Step 6: Generate Report
+Tabulate responses and summarize findings.
 
----
-## Prompts Used:
+## ⚕️ Use Case: AI-powered Diagnostics for Elderly Patients
+Simulated Patient Scenario:
+Age: 72
+Gender: Female
+Symptoms: Fatigue, increased thirst, frequent urination, blurred vision
+History: Type 2 Diabetes, Hypertension
+Vitals: Blood Sugar: 250 mg/dL, BP: 150/90 mmHg
 
-### 1. **Straightforward Prompts**:
-Objective: Directly ask the AI to provide a diagnosis or recommendation based on provided symptoms and patient information.
+## 🤖 Prompting Techniques & Responses
+## 1. Zero-shot Prompting
+## Prompt:
+"A 72-year-old woman presents with fatigue, frequent urination, and blurred vision. She has a history of diabetes and high blood pressure. What is the likely diagnosis and treatment plan?"
 
-**Prompt Example**:
-"Given the symptoms of high fever (39°C), persistent cough, and shortness of breath, provide a possible diagnosis and recommend treatment options."
+## ChatGPT Output:
 
----
+"The symptoms suggest uncontrolled Type 2 Diabetes (likely hyperglycemia). Treatment includes adjusting insulin or oral medications, lifestyle modifications (diet, exercise), and regular monitoring."
 
-**ChatGPT Output**:
-"Based on the symptoms of high fever (39°C), persistent cough, and shortness of breath, a possible diagnosis is **pneumonia** or **COVID-19**. It is recommended to administer antiviral or antibiotic treatment depending on the suspected cause. A chest X-ray and blood tests are advised for confirmation."
+## Claude Output:
 
-**Claude Output**:
-"The symptoms of high fever (39°C), persistent cough, and shortness of breath suggest **viral pneumonia** or **COVID-19**. The recommended course of action is to provide supportive care (fluids, fever management) and consider antiviral treatments. A CT scan and COVID-19 test are recommended."
+"This case appears to involve hyperglycemia due to poorly controlled Type 2 Diabetes. Treatment involves reassessing her diabetes management plan, possibly intensifying medication, monitoring blood glucose, and encouraging hydration."
 
----
+| Criteria     | ChatGPT                                     | Claude                        |
+| ------------ | ------------------------------------------- | ----------------------------- |
+| Accuracy     | Correctly identified diabetes complications | Same                          |
+| Simplicity   | Clear, easy to understand                   | More clinical tone            |
+| Coherence    | Logical and well-structured                 | Structured and specific       |
+| Completeness | Slightly more general                       | More detailed follow-up steps |
 
-## Evaluation:
+## 2. Few-shot Prompting
+## Prompt:
+"Here are examples:
 
-| **Criteria**     | **ChatGPT**                                         | **Claude**                                       |
-|------------------|----------------------------------------------------|-------------------------------------------------|
-| **Accuracy**     | Both identified pneumonia or COVID-19 as likely diagnoses, which was appropriate. | Both identified pneumonia or COVID-19 as likely diagnoses, which was appropriate. |
-| **Coherence**    | Provided a clear and concise response.            | Provided a coherent response, with a more specific recommendation for a CT scan. |
-| **Simplicity**   | Response was straightforward and easy to follow.  | Response had more technical detail but was slightly less accessible. |
-| **User Experience** | Used more general language, which was easy for a broader audience. | Response included more technical detail, which could be more suited for a clinical setting. |
+A 68-year-old with chest pain and BP 180/110 was diagnosed with hypertension crisis.
 
----
-## Final Summary:
+A 75-year-old with tremors and rigidity was diagnosed with Parkinson’s.
 
-- **ChatGPT** provided clear, simple, and user-friendly responses, ideal for general use cases.
-- **Claude** delivered more detailed and technical responses, with a focus on more specific recommendations, which could be useful in clinical environments.
+Now, a 72-year-old woman presents with fatigue, frequent urination, and blurred vision. She has a history of diabetes and hypertension. What is your diagnosis and plan?"
 
----
----
+## ChatGPT Output:
 
-### 2. **Tabular Format Prompting**:
-Objective: Present information in a tabular format for clarity, then ask the AI to analyze and interpret the data.
+"Based on the symptoms and examples, this patient is likely experiencing hyperglycemia. Adjust diabetes meds, emphasize lifestyle interventions, and follow up with blood sugar monitoring."
 
-**Prompt Example**:
-"Below is a table with patient symptoms and vital signs. Based on this, provide a diagnosis and suggest treatment options.
+## Claude Output:
 
-| Symptom              | Measurement   |
-|----------------------|---------------|
-| Temperature          | 39°C          |
-| Heart Rate           | 105 bpm       |
-| Respiratory Rate     | 22 breaths/min|
-| Cough                | Persistent    |
-| Shortness of Breath  | Present       |
+"This resembles hyperglycemia due to poor diabetes control. A1C testing and medication reassessment are advised, along with dietary counseling and blood pressure monitoring."
 
-Interpret the data and give a diagnosis."
+| Criteria  | ChatGPT                            | Claude                             |
+| --------- | ---------------------------------- | ---------------------------------- |
+| Accuracy  | Matches condition well             | Same                               |
+| Relevance | Incorporated context appropriately | Included further detail (A1C test) |
+| Clarity   | Clear for general users            | Suitable for clinicians            |
 
----
+## 3. Chain-of-Thought Prompting
+## Prompt:
+"The patient reports fatigue and frequent urination. These are common symptoms of hyperglycemia. Given her blood sugar of 250 mg/dL and diabetes history, what is your step-by-step diagnosis and recommendation?"
 
-**ChatGPT Output**:
-"Based on the provided data:
-- Temperature: 39°C
-- Heart Rate: 105 bpm
-- Respiratory Rate: 22 breaths/min
-- Persistent Cough and Shortness of Breath
+## ChatGPT Output:
 
-Diagnosis: Likely **pneumonia** or **viral infection**. Further tests such as a chest X-ray and blood cultures are required. Supportive care including hydration and fever control is recommended."
+"Step 1: Evaluate symptoms—fatigue and polyuria suggest hyperglycemia.
+Step 2: Confirm with glucose reading (250 mg/dL).
+Step 3: Assess current medication adherence.
+Step 4: Adjust medications, monitor glucose, advise lifestyle changes."
 
-**Claude Output**:
-"Analysis of the patient's vital signs and symptoms suggests the diagnosis of **respiratory infection** (potentially pneumonia or COVID-19). Immediate testing (X-ray and blood test) is essential to confirm the condition. Management includes supportive care and possibly antiviral treatment."
+## Claude Output:
 
----
+"Step 1: Identify symptoms.
+Step 2: Check lab values—250 mg/dL is high.
+Step 3: Evaluate current therapy.
+Step 4: Recommend dose adjustment, nutritionist referral, and regular follow-up."
 
-## Evaluation:
+| Criteria      | ChatGPT                   | Claude                          |
+| ------------- | ------------------------- | ------------------------------- |
+| Reasoning     | Strong step-by-step logic | Same                            |
+| Completeness  | Comprehensive plan        | Included referral (added value) |
+| Accessibility | Very understandable       | Slightly more technical         |
 
-| **Criteria**     | **ChatGPT**                                         | **Claude**                                       |
-|------------------|----------------------------------------------------|-------------------------------------------------|
-| **Accuracy**     | Both outputs identified pneumonia or a viral infection as the most likely diagnosis. | Both outputs identified pneumonia or a viral infection as the most likely diagnosis. |
-| **Clarity**      | Provided clearer, more structured recommendations. | Slightly more concise output but still accurate. |
-| **Simplicity**   | Response had more thorough explanations, making it easier for non-experts. | More direct and to the point, may be better for experts. |
-| **Speed**        | Quickly generated the response based on the tabular input. | Generated the response almost as quickly as ChatGPT. |
+## 4. Role-based Prompting
+## Prompt:
+"You are a geriatric care physician. A 72-year-old female with a history of diabetes and hypertension complains of blurred vision and fatigue. Suggest a tailored diagnosis and management plan."
 
----
+## ChatGPT Output:
 
-## Final Summary:
+"As a geriatric physician, I suspect hyperglycemia, possibly exacerbated by comorbidities. Management includes medication review, dietary changes, and vision screening."
 
-- **ChatGPT** provided a more detailed, user-friendly response, making it better for general users who require a deeper explanation.
-- **Claude** delivered a more concise output, suitable for those seeking quick and direct answers without detailed elaboration.
+## Claude Output:
 
----
+"As a specialist in elderly care, I would consider diabetes-related complications including retinopathy. A referral to ophthalmology, adjustment of therapy, and monitoring is necessary."
 
-### 3. **Missing Word Prompting**:
-Objective: Present a partially completed sentence or data and have the AI complete it by filling in the missing words or information.
+| Criteria      | ChatGPT                        | Claude                                |
+| ------------- | ------------------------------ | ------------------------------------- |
+| Role accuracy | Aligned with geriatric context | More depth on elderly-specific issues |
+| Tailoring     | Moderate                       | Highly focused on elderly needs       |
+| Specificity   | Broad recommendations          | Included specialist referral          |
 
-**Prompt Example**:
-"The patient presents with a fever of 39°C and a respiratory rate of 22 breaths per minute. Based on these observations, the diagnosis is most likely ___ (options: pneumonia, influenza, asthma, etc.). Fill in the missing diagnosis and suggest next steps for treatment."
+## 5. Multi-modal Prompting (with Table)
+## Prompt:
+"Analyze the table below and provide a diagnosis and treatment plan:
 
----
-**ChatGPT Output**:
-"The patient presents with a fever of 39°C and a respiratory rate of 22 breaths per minute. Based on these observations, the diagnosis is most likely **pneumonia**. Treatment should include antibiotics and supportive care, along with further diagnostic tests like a chest X-ray and blood work."
+| Parameter       | Value                                       |
+| --------------- | ------------------------------------------- |
+| Age             | 72 years                                    |
+| Blood Sugar     | 250 mg/dL                                   |
+| Blood Pressure  | 150/90 mmHg                                 |
+| Symptoms        | Fatigue, blurred vision, frequent urination |
+| Medical History | Diabetes, Hypertension                      |
 
-**Claude Output**:
-"The patient presents with a fever of 39°C and a respiratory rate of 22 breaths per minute. Based on these observations, the diagnosis is most likely **viral pneumonia**. Immediate antiviral treatment should be considered, along with supportive care and a chest X-ray to confirm the diagnosis."
+What is the likely condition and recommended care?"
 
----
+## ChatGPT Output:
 
-## Evaluation:
+"This patient likely has hyperglycemia. Recommendations: medication adjustment, low-GI diet, monitor vitals, vision exam."
 
-| **Criteria**      | **ChatGPT**                                                   | **Claude**                                                   |
-|-------------------|--------------------------------------------------------------|-------------------------------------------------------------|
-| **Accuracy**      | Both platforms correctly identified pneumonia as the likely diagnosis, with ChatGPT focusing on bacterial pneumonia and Claude emphasizing viral pneumonia. | Both platforms correctly identified pneumonia as the likely diagnosis, with ChatGPT focusing on bacterial pneumonia and Claude emphasizing viral pneumonia. |
-| **Completeness**  | Both responses offered comprehensive next steps in treatment and diagnostics, ensuring no critical information was omitted. | Both responses offered comprehensive next steps in treatment and diagnostics, ensuring no critical information was omitted. |
-| **Simplicity**    | ChatGPT provided a clearer and more concise recommendation, catering to a broader audience. | Claude offered a more specific recommendation, with a focus on antiviral treatment, which may be better suited for medical professionals. |
-| **Coherence**     | Both responses were coherent and logically structured; however, Claude’s output exhibited a slightly higher degree of specificity, providing greater depth in certain areas. | Both responses were coherent and logically structured; however, Claude’s output exhibited a slightly higher degree of specificity, providing greater depth in certain areas. |
+## Claude Output:
 
+"Diagnosis: Poorly controlled diabetes (hyperglycemia). Management: Optimize meds, refer to ophthalmology, monitor BP."
 
-## Conclusion:
+| Criteria     | ChatGPT                    | Claude                                 |
+| ------------ | -------------------------- | -------------------------------------- |
+| Table Use    | Effectively processed data | Effectively processed + added referral |
+| Completeness | Slightly brief             | More actionable follow-up              |
 
-- **ChatGPT** demonstrated a more straightforward, user-friendly approach, offering clear and concise explanations suitable for general audiences.
-- **Claude**, on the other hand, provided a response with increased specificity, particularly in terms of treatment details, which may appeal more to healthcare professionals seeking precise guidance.
+## 📊 Final Comparative Table
 
----
+| Prompt Type           | Best Performer | Highlights                                   | Weaknesses                          |
+| --------------------- | -------------- | -------------------------------------------- | ----------------------------------- |
+| Zero-shot Prompting   | Claude         | More specific treatment steps                | Slightly clinical tone              |
+| Few-shot Prompting    | ChatGPT        | Generalizable and understandable             | Lacked clinical testing references  |
+| Chain-of-Thought      | Tie            | Logical and structured reasoning by both     | Claude a bit more technical         |
+| Role-based Prompting  | Claude         | Better geriatric focus                       | Could be too specific for lay users |
+| Multi-modal Prompting | Claude         | Used table data well, gave actionable output | Slightly denser phrasing            |
 
-## Final Comparative Evaluation:
+## 🧾 Conclusion
+ChatGPT excelled in user-friendliness, conversational clarity, and ease of understanding—ideal for elderly users or caregivers.
 
-| **Prompt Type**             | **Best Performing Platform** | **Strengths**                           | **Weaknesses**                                |
-|-----------------------------|------------------------------|-----------------------------------------|------------------------------------------------|
-| **Straightforward Prompts**  | **Tie** (ChatGPT & Claude)    | Both platforms provided accurate diagnoses and clear recommendations. | Claude was slightly more specific with test recommendations. |
-| **Tabular Format Prompting** | **ChatGPT**                   | More structured and clear treatment recommendations. | Claude was concise but could have offered more clarity. |
-| **Missing Word Prompting**   | **ChatGPT**                   | More concise, clear, and easy to understand. | Claude's recommendation for antiviral treatment was more specific. |
+Claude demonstrated clinical precision, deeper reasoning, and domain-specific tailoring—suited for healthcare environments.
 
----
+Chain-of-thought and role-based prompting were especially effective in eliciting rich, diagnostic reasoning and patient-specific care suggestions.
 
-## Final Conclusion:
+Multi-modal prompting (e.g., using tabular data) enabled more accurate, structured interpretation by both models.
 
-- **ChatGPT** performed well in terms of clarity, simplicity, and speed. It provided responses that were easy to understand and sufficient for general use.
-- **Claude** provided more technical specificity, particularly in terms of test recommendations and treatments, which could be beneficial for a more clinical setting.
-
----
-
-# Result
+## Result
 Thus, Both platforms were effective for the given healthcare use case, but **ChatGPT** was more user-friendly, while **Claude** offered more in-depth, technical insights.
-
 
 
