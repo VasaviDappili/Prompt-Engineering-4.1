@@ -189,7 +189,7 @@ Chain-of-thought and role-based prompting were especially effective in eliciting
 
 Multi-modal prompting (e.g., using tabular data) enabled more accurate, structured interpretation by both models.
 
-## Result
-Thus, Both platforms were effective for the given healthcare use case, but **ChatGPT** was more user-friendly, while **Claude** offered more in-depth, technical insights.
+## ✅ Result
+The experiment validates that diverse prompting techniques significantly enhance the AI health assistant’s performance. While ChatGPT is optimal for accessibility and simplicity, Claude offers superior clinical detail and accuracy. Using the right prompting strategy—based on the user’s background (patient vs. clinician)—is key to maximizing MediGuide’s value.
 
 
